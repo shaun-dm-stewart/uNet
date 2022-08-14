@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{3544ed6d-b959-4d09-87a2-b2c528c7c466}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Frame.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\uNet.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\uNet485.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)uNet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Definitions.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Frame.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\uNet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\uNet485.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)keywords.txt" />
+    <Text Include="$(MSBuildThisFileDirectory)library.properties" />
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
+    <Text Include="$(MSBuildThisFileDirectory)uNetNotes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)uNet.sln" />
+    <None Include="$(MSBuildThisFileDirectory)uNet.vcxitems" />
+    <None Include="$(MSBuildThisFileDirectory)uNet.vcxitems.filters" />
+    <None Include="$(MSBuildThisFileDirectory)uNet.vcxitems.user" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{dc004f4a-79b7-415c-9a16-1493b856d01f}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
+    <Text Include="$(MSBuildThisFileDirectory)library.properties" />
+    <Text Include="$(MSBuildThisFileDirectory)src\uNet.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <ClInclude Include="$(MSBuildThisFileDirectory)uNet.h" /> -->
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Frame.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Definitions.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\uNet485.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Frame.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\uNet.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\uNet485.cpp" />
+  </ItemGroup>
+</Project>
