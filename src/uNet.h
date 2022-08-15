@@ -19,12 +19,12 @@
 constexpr int MAX_FILL = FRAMEPACKET_SIZE - 2;
 constexpr int RXBUFFER_SIZE = 240;
 constexpr int TXBUFFER_COUNT = 5;
-constexpr int BROADCAST = -1;
+constexpr int BROADCAST = 0;
 
 class uNetSocket
 {
 public:
-	typedef void (*DataReceived) (unsigned char* data);
+	typedef void (*DataReceived) (unsigned char* data, int sender);
 	typedef void (*DataTransmitted)();
 	uNetSocket();
 	void begin(Stream* serialPort, DataReceived received, DataTransmitted sent, int nodeAddress, int xmitEnable);

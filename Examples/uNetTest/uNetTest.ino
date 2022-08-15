@@ -14,7 +14,7 @@ char _inputString[64];
 bool _stringComplete = false;
 bool _incomingData = false;
 
-void dataReceived(unsigned char* data)
+void dataReceived(unsigned char* data, int source)
 {
     Serial1.print("uNet.ino received: ");
     Serial1.println((char*)data);
